@@ -1,9 +1,5 @@
 <script>
 export default {
-  data () {
-    return {
-    }
-  },
   computed: {
     // 登录用户信息
     signInUser () {

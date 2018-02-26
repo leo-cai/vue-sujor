@@ -3,11 +3,11 @@ import Router from 'vue-router'
 import {
   AppHeader,
   AppFooter,
-  Logo,
   Index,
   SignIn,
   SignUp,
-  AdminIndex
+  AdminIndex,
+  Test
 } from './params'
 
 Vue.use(Router)
@@ -24,6 +24,12 @@ export default new Router({
       }
     },
     {
+      path: '/test',
+      components: {
+        'app-body': Test
+      }
+    },
+    {
       path: '/admin',
       components: {
         'app-body': AdminIndex
@@ -32,14 +38,12 @@ export default new Router({
     {
       path: '/admin/signin',
       components: {
-        'app-logo': Logo,
         'app-body': SignIn
       }
     },
     {
       path: '/admin/signup',
       components: {
-        'app-logo': Logo,
         'app-body': SignUp
       }
     }

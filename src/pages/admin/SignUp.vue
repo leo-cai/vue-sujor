@@ -1,7 +1,10 @@
 <script>
+import adminBg from '../../components/admin/AdminBg.vue'
+import appLogo from '../../components/public/AppLogo.vue'
 export default {
-  head: {
-    title: 'Sujor | 注册'
+  components: {
+    adminBg,
+    appLogo
   },
   data () {
     return {
@@ -32,39 +35,43 @@ export default {
 </script>
 
 <template>
-  <el-row class="app-sign-wrapper">
-    <div class="app-sign-input-wrapper">
-      <el-row type="flex" justify="center" class="mb-20">
-        <el-col>
-          <el-input placeholder="请输入用户名" v-model="username"></el-input>
-        </el-col>
-      </el-row>
-    </div>
-    <div class="app-sign-input-wrapper">
-      <el-row type="flex" justify="center" class="mb-20">
-        <el-col>
-          <el-input placeholder="请输入密码" @keyup.enter.native="signUp()" type="password" v-model="password"></el-input>
-        </el-col>
-      </el-row>
-    </div>
-    <div class="app-sign-input-wrapper">
-      <el-row type="flex" justify="center" class="mb-20">
-        <el-col>
-          <el-button type="primary" style="width: 100%" @click="signUp()">注册</el-button>
-        </el-col>
-      </el-row>
-    </div>
-    <div class="app-sign-input-wrapper">
-      <el-row type="flex" justify="center" class="mb-20">
-        <el-col>
-          <p>
-            已有账号？
-            <router-link to="/admin/signin">立即登录</router-link>
-          </p>
-        </el-col>
-      </el-row>
-    </div>
-  </el-row>
+  <div>
+    <admin-bg></admin-bg>
+    <app-logo></app-logo>
+    <el-row class="app-sign-wrapper">
+      <div class="app-sign-input-wrapper">
+        <el-row type="flex" justify="center" class="mb-20">
+          <el-col>
+            <el-input placeholder="请输入用户名" v-model="username"></el-input>
+          </el-col>
+        </el-row>
+      </div>
+      <div class="app-sign-input-wrapper">
+        <el-row type="flex" justify="center" class="mb-20">
+          <el-col>
+            <el-input placeholder="请输入密码" @keyup.enter.native="signUp()" type="password" v-model="password"></el-input>
+          </el-col>
+        </el-row>
+      </div>
+      <div class="app-sign-input-wrapper">
+        <el-row type="flex" justify="center" class="mb-20">
+          <el-col>
+            <el-button type="primary" style="width: 100%" @click="signUp()">注册</el-button>
+          </el-col>
+        </el-row>
+      </div>
+      <div class="app-sign-input-wrapper">
+        <el-row type="flex" justify="center" class="mb-20">
+          <el-col>
+            <p>
+              已有账号？
+              <router-link to="/admin/signin">立即登录</router-link>
+            </p>
+          </el-col>
+        </el-row>
+      </div>
+    </el-row>
+  </div>
 </template>
 
 <style lang="stylus" scoped>

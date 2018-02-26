@@ -10,12 +10,6 @@ const AppFooter = resolve => {
   })
 }
 
-const Logo = resolve => {
-  require.ensure(['../components/public/Logo.vue'], () => {
-    resolve(require('../components/public/Logo.vue'))
-  })
-}
-
 const Index = resolve => {
   require.ensure(['../pages/Index.vue'], () => {
     resolve(require('../pages/Index.vue'))
@@ -40,12 +34,18 @@ const AdminIndex = resolve => {
   })
 }
 
+const Test = resolve => {
+  require.ensure(['../pages/Test.vue'], () => {
+    resolve(require('../pages/Test.vue'))
+  })
+}
+
 export {
   AppHeader,
   AppFooter,
-  Logo,
   Index,
   SignIn,
   SignUp,
-  AdminIndex
+  AdminIndex,
+  Test
 }
