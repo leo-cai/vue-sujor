@@ -1,0 +1,54 @@
+@import "config.styl"
+
+.body-wrapper
+  width 100%
+  color theme-puce
+
+.index-wrapper
+  width high-width
+  padding header-height + 30px 0 30px 0
+  margin 0 auto
+  position relative
+
+@media only screen and (max-width high-width)
+  .index-wrapper
+    width medium-width
+
+@media only screen and (max-width medium-width)
+  .index-wrapper
+    width low-width
+
+@media only screen and (max-width low-width)
+  .index-wrapper
+    width low-width
+
+
+.index-left
+  display inline-block
+  position absolute
+  left 0
+  width 60%
+
+.index-right
+  display inline-block
+  position absolute
+  right 0
+  width 35%
+
+.index-banner
+  color #7f828b
+  font-family Zapfino
+  h5
+    float left
+    margin 0 20px
+  div
+    overflow hidden
+    height 20px
+    margin 0 0 20px 10px
+    border-bottom silver 1px solid
+
+.index-articles
+  margin 50px 20px
+  ul
+    li
+      margin-top 30px

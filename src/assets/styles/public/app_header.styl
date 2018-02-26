@@ -1,0 +1,53 @@
+@import "../config.styl"
+
+header
+  position fixed
+  top 0
+  z-index 999
+  width 100%
+  height header-height
+  background whitesmoke
+  transition (All .2s ease-in-out)
+  transform (translateY(0))
+  &.darken
+    box-shadow (rgba(0, 0, 0, .1) 0 1px 2px)
+  &.fixed
+    transform (translateY(-100%))
+
+.app-header
+  position relative
+  height header-height
+  line-height header-height
+
+.app-header-left
+  display inline-block
+  width 200px
+  position absolute
+  top 0
+  left 0
+  height header-height
+
+.app-header-right
+  display inline-block
+  width 200px
+  position absolute
+  top 0
+  right 0
+  height header-height
+
+.app-header-middle
+  margin 0 200px
+  text-align center
+  font-family Zapfino
+  a
+    margin 0 20px
+
+.app-header-logo
+  width logo-width
+  height header-height
+
+.app-header-light
+  width light-width
+  height light-height
+  margin ((header-height - light-height) / 2) ((header-height - light-height) / 2) 0 0
+
